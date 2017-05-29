@@ -20,7 +20,6 @@
 				str +=     '<select class="city"></select>';
 				str +=     '<select class="area"></select>';
 				str +=   '</div>';
-				str +=   '<a class="cancle" href="javascript:;">×</a>';
 				str += '</div>';
 			$('.aaarea').remove();
 			$('body').append(str);
