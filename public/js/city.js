@@ -1,5 +1,5 @@
 var addressID = 'lw-teacher-address';
-var nameEl = document.getElementById(addressID);
+var nameElAddressID = document.getElementById(addressID);
 
 var first = []; /* 省，直辖市 */
 var second = []; /* 市 */
@@ -104,7 +104,7 @@ picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
   console.log(selectedIndex);
 });
 
-nameEl.addEventListener('click', function () {
+nameElAddressID.addEventListener('click', function () {
 	picker.show();
 });
 
