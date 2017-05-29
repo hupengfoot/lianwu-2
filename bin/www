@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const assert = require('assert');
+try{
+    fs.mkdirSync('logs');
+}catch(err){
+}
+
+const global_config = require('../config/global_conf').global_config;
+global.port    = process.argv[2];
+
+const path = require('path');
+const https = require('https');
+const app = require('../app');
+
+assert(global.port);
+
+app.set('port', global.port);
+console.log('https listening ont port %d', app.get('port'));
+let server = app.listen(app.get('port'), '', 4096, function() {
+    console.log('Express server listening on port ' + server.address().port);
+});
+
+server.on('clientError', function(exp, socket){
+    console.error('HTTP ERROR %s', JSON.stringify(exp));
+});
+
+if(global_config.httpsPort && global_config.httpsPort.length > 0){
+    let key = fs.readFileSync(path.join(global.rootPath, "ssl/server.key")); 
+    let cert = fs.readFileSync(path.join(global.rootPath, "ssl/server.pem")); 
+    let ca = fs.readFileSysnc(path.join(global.rootPath, "ssl/server.ca"));
+    let credentials = {key : key, cert:cert, ca:ca};
+    let httpsServer = https.createServer(credentials, app);
+    httpsServer.listen(global_config.httpsPort);
+}
+

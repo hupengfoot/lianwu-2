@@ -1,0 +1,124 @@
+<html lang="zh-cmn-Hans">
+    <head>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <link rel="stylesheet" href="./weui/dist/style/weui.css">
+        <title>教师注册</title>
+	<style>
+	    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+	    .en-markup-crop-options {
+	            top: 18px !important;
+	    	    left: 50% !important;
+	    	    margin-left: -100px !important;
+	    	    width: 200px !important;
+	    	    border: 2px rgba(255,255,255,.38) solid !important;
+	    	    border-radius: 4px !important;
+	    }
+	    .en-markup-crop-options div div:first-of-type {
+	            margin-left: 0px !important;
+	    }
+	</style>
+	<script src="./js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery.area.js"></script>
+	<script>
+            $(function(){
+		$('#lw-teacher-address').aaarea();
+	    });
+        </script>
+	<script>
+	    $(document).ready(function(){
+		$("#lw-teacher-submit").click(function(){
+		    var url = "/user/teacher/add?";
+		    var data = {
+			szName:$("#lw-teacher-name").val(),
+			szOpenID:$("#lw-teacher-wechat").val(),
+			szHeadUrl:$("#lw-teacher-phone").val(),
+			szSignature:$("#lw-teacher-sign").val(),
+			szArea:$("#lw-teacher-address").val(),
+			iPrice:$("#lw-teacher-charge").val(),
+			szType:$("#lw-teacher-type").val(),
+			szFreeTime:$("#lw-teacher-time").val(),
+			szPhone:$("#lw-teacher-phone").val(),
+		    };
+		    $.post(url, data, function(data, status){
+			alert(data);
+			alert(status);
+		    });
+		});
+	    });
+	</script>
+    </head>
+    <body>
+	<div class="weui-cells">
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">教师姓名</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-name" class="weui-input" type="string" placeholder="请输入姓名">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">微信号</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-wechat" class="weui-input" type="string" placeholder="输入微信号">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">手机号</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-phone" class="weui-input" type="tel" placeholder="请输入手机号">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">个性签名</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-sign" class="weui-input" type="string" placeholder="请输入个性签名">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">居住地</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-address" class="weui-input" type="string" placeholder="请输入居住地">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">期望授课费</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-charge" class="weui-input" type="string" placeholder="请输入期望授课费">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">舞种类型</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-type" class="weui-input" type="string" placeholder="请输入舞种类型">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">空闲时间</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-teacher-time" class="weui-input" type="string" placeholder="请输入空闲时间">
+		</div>
+	    </div>
+	    <div class="weui-btn-area">
+		<a class="weui-btn weui-btn_primary" href="javascript:" id="lw-teacher-submit">
+		    提交
+		</a>
+	    </div>
+	</div>
+    </body>
+</html>

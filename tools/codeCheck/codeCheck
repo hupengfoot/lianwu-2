@@ -1,0 +1,17 @@
+#! /bin/bash
+
+if [ -n "$1" ];then
+    echo 'pleace wait now check in strict mode'
+    ./jshint294/node_modules/jshint/bin/jshint ../../ --config ./strict.rc --exclude-path ./jshintignore > result_strict.txt
+    echo 'done.please see result_strict.txt'
+else
+    echo 'pleace wait now check ...'
+    ./jshint294/node_modules/jshint/bin/jshint ../../ --config ./relax.rc --exclude-path ./jshintignore > result.txt
+    echo 'done.please see result.txt'
+fi
+
+
+
+
+
+

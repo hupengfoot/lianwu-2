@@ -1,0 +1,17 @@
+[{
+    "iRedisName":1,
+    "szRedisIP":"10.12.236.196",
+    "szRedisPort":8500,
+    "szPwd":"HelloKitty@Tencent",
+    "szSlaveIP":"10.12.236.196",
+    "szSlavePort":8500,
+    "szSlavePwd":"HelloKitty@Tencent"
+},{
+    "iRedisName":2,
+    "szRedisIP":"10.12.236.196",
+    "szRedisPort":8500,
+    "szPwd":"HelloKitty@Tencent",
+    "szSlaveIP":"10.12.236.196",
+    "szSlavePort":8500,
+    "szSlavePwd":"HelloKitty@Tencent"
+}]

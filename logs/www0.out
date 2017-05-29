@@ -1,0 +1,39 @@
+[32m[2017-05-13 10:17:55.669]  INFO[39m - [bin/www:19]   https listening ont port 8011
+[32m[2017-05-13 10:17:55.678]  INFO[39m - [bin/www:21]   Express server listening on port 8011
+[32m[2017-05-13 10:17:56.731]  INFO[39m - [dbaccess/sqlPool.js:13]   LOAD DB 0 CONFIG 10.150.169.152:10000-dbGamer0427
+[32m[2017-05-13 10:17:56.800]  INFO[39m - [dbaccess/sqlPool.js:13]   LOAD DB 1 CONFIG 10.150.169.152:10000-dbGamer0427
+[32m[2017-05-13 10:17:56.800]  INFO[39m - [routes/init.js:57]   {f:routes/example,r:/example,a:undefined} used max time 91ms
+[32m[2017-05-13 10:17:56.801]  INFO[39m - [console.js:77]   async: 92.189ms
+[31m[2017-05-13 10:40:47.153] ERROR[39m - [node_modules/pmx/lib/notify.js:51]   TypeError: joi.string(...).requried is not a function
+    at Object.<anonymous> (/Users/hupeng/mycode/lianwu/define/user_query.js:29:29)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/hupeng/mycode/lianwu/app.js:25:22)
+    at Module._compile (module.js:556:32)
+[31m[2017-05-13 10:40:47.487] ERROR[39m - [node_modules/pmx/lib/notify.js:51]   TypeError: joi.string(...).requried is not a function
+    at Object.<anonymous> (/Users/hupeng/mycode/lianwu/define/user_query.js:29:29)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/hupeng/mycode/lianwu/app.js:25:22)
+    at Module._compile (module.js:556:32)
+[31m[2017-05-13 10:40:47.810] ERROR[39m - [node_modules/pmx/lib/notify.js:51]   TypeError: joi.string(...).requried is not a function
+    at Object.<anonymous> (/Users/hupeng/mycode/lianwu/define/user_query.js:29:29)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/hupeng/mycode/lianwu/app.js:25:22)
+    at Module._compile (module.js:556:32)
