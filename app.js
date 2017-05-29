@@ -42,11 +42,6 @@ function initDelay() {
     initRoutes(app);
 }
 
-app.get('/', function(req, res, next){
-    let param = url.parse(req.url, true).query;
-    res.jsonp(param.echostr);
-});
-
 let _TIME_DELAY = 1000; // 延时启动
 setTimeout(initDelay, _TIME_DELAY);
 
