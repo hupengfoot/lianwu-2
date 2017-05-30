@@ -36,8 +36,7 @@
 			data[szSignature] = $("#lw-teacher-sign").val();
 		    }
 		    $.post(url, data, function(data, status){
-			var result = JSON.parse(data);
-			if(status === "success" && result.ret === 0){
+			if(status === "success" && data.ret === 0){
 			    window.location.href = "submit_success.html";
 			}else{
 			    alert("注册失败，请检查注册信息");
