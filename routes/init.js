@@ -24,6 +24,7 @@ _.userInit = function(app){
 	//用户侧
     aMids.push({f:'routes/example', r:'/example'});
     aMids.push({f:'routes/user/teacher', r:'/user/teacher'});
+    aMids.push({f:'routes/user/school', r:'/user/school'});
 };
 
 _.masterInit = function(app){

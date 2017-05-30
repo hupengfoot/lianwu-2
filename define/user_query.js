@@ -44,6 +44,31 @@ module.exports = [
     },
     limit:500,
     comment:"教师列表接口",
+},
+{
+    router:"/user/school/add",
+    params:{
+	szName : joi.string().required(),
+	szContactsName : joi.string().required(),
+	szContactsWe : joi.string().required(),
+	szContactsPhone : joi.string().required(),
+	szContactsMail : joi.string().required(),
+	szSchoolDesc : joi.string().required(),
+	szArea : joi.string().required(),
+	szType : joi.string().required(),
+	szCourseTime : joi.string().required()
+    },
+    post:1,
+    limit:500,
+    comment:"添加学校接口",
+},
+{
+    router:"/user/school/list",
+    params:{
+	iStart : joi.number().integer().required(),
+	iNum : joi.number().integer().required(),
+    },
+    limit:500,
+    comment:"学校列表接口",
 }
-
 ];

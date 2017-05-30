@@ -18,7 +18,6 @@ create table IF NOT EXISTS tbTeacher(
 create table IF NOT EXISTS tbSchool(
     iSID bigint unsigned not null auto_increment comment '学校ID',
     szName varchar(256) default '' comment '学校名字',
-    szHeadUrl varchar(1024) default '' comment '学校头像',
     szContactsName varchar(256) default '' comment '联系人姓名',
     szContactsWe varchar(256) default '' comment '联系人微信号',
     szContactsPhone varchar(256) default '' comment '联系人电话',

@@ -18,7 +18,113 @@
 	            margin-left: 0px !important;
 	    }
 	</style>
+	<script src="./js/jquery-3.2.0.min.js"></script>
+	<script>
+	    $(document).ready(function(){
+		$("#lw-school-submit").click(function(){
+		    var url = "/user/school/add";
+		    var data = {
+			szName:$("#lw-school-name").val(),
+			szContactsName:$("#lw-school-contact").val(),
+			szContactsWe:$("#lw-school-wechat").val(),
+			szContactsPhone:$('#lw-school-phone').val(),
+			szContactsMail:$('#lw-school-mail').val(),
+			szSchoolDesc:$('#lw-school-desc').val(),
+			szArea:$('#lw-school-address').val(),
+			szType:$('#lw-school-type').val(),
+			szCourseTime:$('#lw-school-time').val()
+		    };
+		    $.post(url, data, function(data, status){
+			if(status === "success" && data.ret === 0){
+			    window.location.href = "submit_success.html";
+			}else{
+			    alert("注册失败，请检查注册信息");
+			}
+		    });
+		});
+	    });
+	</script>
     </head>
     <body>
+	<div class="weui-cells">
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">学校名</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-name" class="weui-input" type="string" placeholder="请输入学校名">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">联系人姓名</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-contact" class="weui-input" type="string" placeholder="输入联系人姓名">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">联系人微信号</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-wechat" class="weui-input" type="string" placeholder="输入联系人微信号">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">联系人手机号</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-phone" class="weui-input" type="tel" placeholder="请输入联系人手机号">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">联系人邮箱</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-mail" class="weui-input" type="string" placeholder="请输入联系人邮箱">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">学校描述</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-desc" class="weui-input" type="string" placeholder="请输入学校描述">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">学校地址</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-address" class="weui-input" type="string" placeholder="请输入学校地址">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">舞种类型</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-type" class="weui-input" type="string" placeholder="请输入舞种类型">
+		</div>
+	    </div>
+	    <div class="weui-cell">
+		<div class="weui-cell__hd">
+		    <label class="weui-label">上课时间</label>
+		</div>
+		<div class="weui-cell__bd">
+		    <input id="lw-school-time" class="weui-input" type="string" placeholder="请输入教学时间">
+		</div>
+	    </div>
+	    <div class="weui-btn-area">
+		<a class="weui-btn weui-btn_primary" href="javascript:" id="lw-school-submit">
+		    提交
+		</a>
+	    </div>
+	</div>
+
     </body>
 </html>
