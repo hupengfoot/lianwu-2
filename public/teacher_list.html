@@ -19,112 +19,56 @@
 	    }
 	</style>
 	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-	<script type="text/javascript" src="js/teacher.js"></script>
+	<script>
+	    function fillOneCell(szName, szContent){
+		var oneCell = 
+		    '<div class="weui-cell">' +
+		    '<div class="weui-cell__bd">' +
+		    '<p>' + szName + '</p>' +
+		    '</div>' +
+		    '<div class="weui-cell__bd">' +
+		    '<p>' + szContent + '</p>' +
+		    '</div>' +
+		    '</div>';
+		return oneCell;
+	    }
+	    function fillOneTeacher(row){
+		var oneTeacherContent = '' +
+		    '<div class="weui-cell">' +
+		    '<div class="weui-cell__hd">' +
+		    '<img src="http://img1.imgtn.bdimg.com/it/u=844977154,354772728&fm=214&gp=0.jpg" alt="" style="width:20px;margin-right:5px;display:block">' +
+		    '</div>' +
+		    '<div class="weui-cell__bd">' +
+		    '<p>' + row.szName + '</p>' +
+		    '</div>' +
+		    '</div>' +
+		    fillOneCell("居住地", row.szArea) +
+		    fillOneCell("价格", row.szPrice) +
+		    fillOneCell("舞种", row.szType) +
+		    fillOneCell("联系电话", row.szPhone) +
+		    fileOneCell("空闲时间", row.szFreeTime); 
+	    }
+	</script>
 	<script>
 	    $(document).ready(function(){
+		var url = "/user/teacher/list";
+		var data = {
+		    iStart : 0,
+		    iNum : 100000
+		};
+		$.get(url, data, function(data, status){
+		    var resultList = "";
+		    for(var i in data.result){
+			resultList = resultList + fillOneTeacher(data.result[i]);
+		    }
+		    $("#teacherList").html(resultList);
+		});
+
 	    });
 	</script>
     </head>
     <body>
-	<div class="weui-cells">
-	    <div class="weui-cell">
-		<div class="weui-cell__hd">
-		    <img src="http://img1.imgtn.bdimg.com/it/u=844977154,354772728&fm=214&gp=0.jpg" alt="" style="width:20px;margin-right:5px;display:block">
-		</div>
-		<div class="weui-cell__bd">
-		    <p>胡鹏</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>居住地区</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>上海市闵行区漕宝路1528号</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>价格</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>每小时1000元</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>舞种</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>探戈</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>联系电话</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>13917658422</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>空闲时间</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>周六下午</p>
-		</div>
-	    </div>
-	</div>
-	<div class="weui-cells">
-	    <div class="weui-cell">
-		<div class="weui-cell__hd">
-		    <img src="http://img1.imgtn.bdimg.com/it/u=844977154,354772728&fm=214&gp=0.jpg" alt="" style="width:20px;margin-right:5px;display:block">
-		</div>
-		<div class="weui-cell__bd">
-		    <p>张翀</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>居住地区</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>上海市黄浦区斜土东路158弄3号2003室</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>价格</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>每小时1元</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>舞种</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>广场</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>联系电话</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>13701905447</p>
-		</div>
-	    </div>
-	    <div class="weui-cell">
-		<div class="weui-cell__bd">
-		    <p>空闲时间</p>
-		</div>
-		<div class="weui-cell__bd">
-		    <p>周日下午</p>
-		</div>
-	    </div>
+	<div id="teacherList" class="weui-cells">
 	</div>
     </body>
 </html>

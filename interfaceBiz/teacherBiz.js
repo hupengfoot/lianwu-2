@@ -12,7 +12,7 @@ teacherBiz.add = function(szName, szOpenID, szPhone, szSignature, szArea, szPric
 };
 
 teacherBiz.list = function(iStart, iNum, cb){
-    sqlPool.excute(parseInt(iStart), parseInt(iNum), function(err, rows){
+    sqlPool.excute(2, [parseInt(iStart), parseInt(iNum)], function(err, rows){
 	cb(err, rows);
     });
 };
