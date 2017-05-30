@@ -11,6 +11,8 @@ module.exports.tableDbIndex = {
 //0~9999 为用户相关模块sql
 let user_sqls = {
     1 : "select 1",
+    2 : "select *from tbTeacher limit ?, ?",
+    6000 : "insert into tbTeacher (szName, szOpenID, szSignature, szArea, szPrice, szType, szPhone, szFreeTime, dtRegisterTime) values(?, ?, ?, ?, ?, ?, ?, ?, now())",
 };
 
 let all_sqls = user_sqls;

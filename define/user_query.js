@@ -25,17 +25,25 @@ module.exports = [
     params:{
 	szName : joi.string().required(),
 	szOpenID : joi.string().required(),
-	szHeadUrl : joi.string().required(),
-	szSignature : joi.string().required(),
-	szArea : joi.string().required(),
-	iLabel : joi.number().integer().min(0),
-	iPrice : joi.number().integer().min(0).required(),
-	szType : joi.string().required(),
 	szPhone : joi.string().required(),
+	szSignature : joi.string(),
+	szArea : joi.string().required(),
+	szPrice : joi.string().required(),
+	szType : joi.string().required(),
 	szFreeTime : joi.string().required(),
     },
     post:1,
     limit:500,
     comment:"添加教师接口",
+},
+{
+    router:"/user/teacher/list",
+    params:{
+	iStart : joi.number().integer().required(),
+	iNum : joi.number().integer().required(),
+    },
+    limit:500,
+    comment:"教师列表接口",
 }
+
 ];

@@ -1,40 +1,40 @@
 [{ 
     "szDbName" : 0,
     "readDB":{
-        "szDbIP":"10.150.169.152",
-        "szDbPort":"10000",
-        "szDbUser":"ender",
+        "szDbIP":"127.0.0.1",
+        "szDbPort":"3306",
+        "szDbUser":"root",
         "szDbPwd":"000000",
-        "szDbDefaultDb":"dbGamer0427"
+        "szDbDefaultDb":"dbLianwu"
     },
     "writeDB":{
-        "szDbIP":"10.150.169.152",
-        "szDbPort":"10000",
-        "szDbUser":"ender",
+        "szDbIP":"127.0.0.1",
+        "szDbPort":"3306",
+        "szDbUser":"root",
         "szDbPwd":"000000",
-        "szDbDefaultDb":"dbGamer0427"
+        "szDbDefaultDb":"dbLianwu"
      },
     "slaveDB":{
-        "szDbIP":"10.150.169.152",
-        "szDbPort":"10000",
-        "szDbUser":"ender",
+        "szDbIP":"127.0.0.1",
+        "szDbPort":"3306",
+        "szDbUser":"root",
         "szDbPwd":"000000",
-        "szDbDefaultDb":"dbGamer0427"
+        "szDbDefaultDb":"dbLianwu"
      }
 },{ 
     "szDbName" : 1,
     "readDB":{
-        "szDbIP":"10.150.169.152",
-        "szDbPort":"10000",
-        "szDbUser":"ender",
+        "szDbIP":"127.0.0.1",
+        "szDbPort":"3306",
+        "szDbUser":"root",
         "szDbPwd":"000000",
-        "szDbDefaultDb":"dbGamer0427"
+        "szDbDefaultDb":"dbLianwu"
     },
     "writeDB":{
-        "szDbIP":"10.150.169.152",
-        "szDbPort":"10000",
-        "szDbUser":"ender",
+        "szDbIP":"127.0.0.1",
+        "szDbPort":"3306",
+        "szDbUser":"root",
         "szDbPwd":"000000",
-        "szDbDefaultDb":"dbGamer0427"
+        "szDbDefaultDb":"dbLianwu"
      }
 }]

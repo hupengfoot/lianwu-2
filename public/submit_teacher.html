@@ -26,14 +26,15 @@
 		    var data = {
 			szName:$("#lw-teacher-name").val(),
 			szOpenID:$("#lw-teacher-wechat").val(),
-			szHeadUrl:$("#lw-teacher-phone").val(),
-			szSignature:$("#lw-teacher-sign").val(),
+			szPhone:$("#lw-teacher-phone").val(),
 			szArea:$("#lw-teacher-address").val(),
-			iPrice:$("#lw-teacher-charge").val(),
+			szPrice:$("#lw-teacher-charge").val(),
 			szType:$("#lw-teacher-type").val(),
 			szFreeTime:$("#lw-teacher-time").val(),
-			szPhone:$("#lw-teacher-phone").val(),
 		    };
+		    if($("#lw-teacher-sign").val() !== '' && $("#lw-teacher-sign").val() !== null && $("#lw-teacher-sign").val() !== undefined){	
+			data[szSignature] = $("#lw-teacher-sign").val();
+		    }
 		    $.post(url, data, function(data, status){
 			alert(data);
 			alert(status);
