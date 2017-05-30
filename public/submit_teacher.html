@@ -36,7 +36,12 @@
 			data[szSignature] = $("#lw-teacher-sign").val();
 		    }
 		    $.post(url, data, function(data, status){
-			alert("您已注册成功");
+			var result = JSON.parse(data);
+			if(status === "success" && result.ret === 0){
+			    window.location.href = "submit_success.html";
+			}else{
+			    alert("注册失败，请检查注册信息");
+			}
 		    });
 		});
 	    });
