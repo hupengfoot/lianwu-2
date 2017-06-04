@@ -13,7 +13,7 @@ let user_sqls = {
     1 : "select 1",
     2 : "select *from tbTeacher limit ?, ?",
     3 : "select *from tbSchool limit ?, ?",
-    6000 : "insert into tbTeacher (szName, szOpenID, szSignature, szArea, szPrice, szType, szPhone, szFreeTime, dtRegisterTime) values(?, ?, ?, ?, ?, ?, ?, ?, now())",
+    6000 : "insert into tbTeacher (szName, szOpenID, szSignature, szArea, szPrice, szPrice1, szPrice2, szType, szPhone, szFreeTime, dtRegisterTime) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())",
     6001 : "insert into tbSchool(szName, szContactsName, szContactsWe, szContactsPhone, szContactsMail, szSchoolDesc, szArea, szType, iFullTime, szCourseTime, dtRegisterTime) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())",
 };
 

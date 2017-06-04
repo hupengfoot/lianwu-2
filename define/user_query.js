@@ -29,6 +29,8 @@ module.exports = [
 	szSignature : joi.string(),
 	szArea : joi.string().required(),
 	szPrice : joi.string().required(),
+	szPrice1 : joi.string().required(),
+	szPrice2 : joi.string().required(),
 	szType : joi.string().required(),
 	szFreeTime : joi.string().required(),
     },

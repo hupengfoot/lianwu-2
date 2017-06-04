@@ -14,7 +14,7 @@ router.use("/add", function(req, res){
     if(param.szSignature === undefined || param.szSignature === null){
 	param.szSignature = "";
     }
-    teacherBiz.add(param.szName, param.szOpenID, param.szPhone, param.szSignature, param.szArea, param.szPrice, param.szType, param.szFreeTime, function(err, rows){
+    teacherBiz.add(param.szName, param.szOpenID, param.szPhone, param.szSignature, param.szArea, param.szPrice, param.szPrice1, param.szPrice2, param.szType, param.szFreeTime, function(err, rows){
 	msg.wrapper(err, rows, res);
     });
 });

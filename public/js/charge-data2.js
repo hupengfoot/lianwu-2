@@ -1,11 +1,11 @@
-var chargeTime = [
+var chargeTime2 = [
   {
-    "name": "1小时",
+    "name": "2小时",
     "type": 0
   }
 ]
 
-var chargeMoney = [
+var chargeMoney2 = [
     {
 	"name":"0-100",
 	"type": 0

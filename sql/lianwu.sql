@@ -8,6 +8,8 @@ create table IF NOT EXISTS tbTeacher(
     iScore int unsigned default 0 comment '教师评分',
     szArea varchar(1024) default '' comment '居住地区',
     szPrice varchar(1024) default '' comment '价格',
+    szPrice1 varchar(1024) default '' comment '价格1',
+    szPrice2 varchar(1024) default '' comment '价格2',
     szType varchar(1024) default '' comment '舞种类型',
     szPhone varchar(256) default '' comment '联系电话',
     szFreeTime varchar(512) default '' comment '空闲时间',

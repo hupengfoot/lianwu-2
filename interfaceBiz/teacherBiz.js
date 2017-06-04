@@ -7,8 +7,8 @@ const sqlPool = require(path.join(global.rootPath, "dbaccess/sqlPool"));
 let teacherBiz = {};
 var _ = {};
 
-teacherBiz.add = function(szName, szOpenID, szPhone, szSignature, szArea, szPrice, szType, szFreeTime, cb){
-    sqlPool.excute(6000, [szName, szOpenID, szSignature, szArea, szPrice, szType, szPhone, szFreeTime], cb);
+teacherBiz.add = function(szName, szOpenID, szPhone, szSignature, szArea, szPrice, szPrice1, szPrice2, szType, szFreeTime, cb){
+    sqlPool.excute(6000, [szName, szOpenID, szSignature, szArea, szPrice, szPrice1, szPrice2, szType, szPhone, szFreeTime], cb);
 };
 
 teacherBiz.list = function(iStart, iNum, cb){
