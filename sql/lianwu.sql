@@ -25,7 +25,7 @@ create table IF NOT EXISTS tbSchool(
     szSchoolDesc varchar(1024) default '' comment '学校描述',
     szArea varchar(1024) default '' comment '学校地址',
     szType varchar(1024) default '' comment '舞种',
-    iFullTime bigint unsigned not null default '' comment '0 兼职，1 全职',
+    iFullTime bigint unsigned not null default 0 comment '0 兼职，1 全职',
     szCourseTime varchar(1024) default '' comment '上课时间',
     dtRegisterTime datetime not null default '1970-01-01 00:00:00' comment '开始日期',
     primary key (`iSID`)
