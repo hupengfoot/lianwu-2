@@ -23,6 +23,10 @@
 	    $(document).ready(function(){
 		$("#lw-school-submit").click(function(){
 		    var url = "/user/school/add";
+		    var iDuty = 0;
+		    if($('#lw-duty-type').val() === "全职"){
+			iDuty = 1;
+		    }
 		    var data = {
 			szName:$("#lw-school-name").val(),
 			szContactsName:$("#lw-school-contact").val(),
@@ -32,7 +36,7 @@
 			szSchoolDesc:$('#lw-school-desc').val(),
 			szArea:$('#lw-school-address').val(),
 			szType:$('#lw-school-type').val(),
-			iFullTime:$('#lw-duty-type').val(),
+			iFullTime:iDuty,
 			szCourseTime:$('#lw-school-time').val()
 		    };
 		    $.post(url, data, function(data, status){
