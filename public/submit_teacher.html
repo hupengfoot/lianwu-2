@@ -35,7 +35,7 @@
 			szFreeTime:$("#lw-teacher-time").val(),
 		    };
 		    if($("#lw-teacher-sign").val() !== '' && $("#lw-teacher-sign").val() !== null && $("#lw-teacher-sign").val() !== undefined){	
-			data[szSignature] = $("#lw-teacher-sign").val();
+			data.szSignature = $("#lw-teacher-sign").val();
 		    }
 		    $.post(url, data, function(data, status){
 			if(status === "success" && data.ret === 0){
