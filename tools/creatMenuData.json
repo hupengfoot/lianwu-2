@@ -1,29 +1,39 @@
 {
-    "button":[
+    "button": [
 	{
-	    "name":"菜单",
-	    "sub_button":[
+	    "name" : "教师自荐", 
+	    "sub_button" : [
 		{
-		    "type":"view",
-		    "name":"教师注册",
-		    "url":"http://115.159.158.86/submit_teacher.html"
-		},
-		{
-		    "type":"view",
-		    "name":"教师列表",
-		    "url":"http://115.159.158.86/teacher_list.html"
-		},
-		{
-		    "type":"view",
-		    "name":"学校注册",
-		    "url":"http://115.159.158.86/submit_school.html"
-		},
-		{
-		    "type":"view",
-		    "name":"学校列表",
-		    "url":"http://115.159.158.86/school_list.html"
-		},
+		    "type": "view", 
+		    "name": "教师注册", 
+		    "url": "http://115.159.158.86/submit_teacher.html"
+		}
 	    ]
 	},
+	{
+	    "name": "学校发布", 
+	    "sub_button": [
+		{
+		    "type": "view", 
+		    "name": "学校注册", 
+		    "url": "http://115.159.158.86/submit_school.html"
+		}
+	    ]
+	},
+	{
+	    "name": "列表", 
+	    "sub_button": [
+		{
+		    "type": "view", 
+		    "name": "教师列表", 
+		    "url": "http://115.159.158.86/teacher_list.html"
+		}, 
+		{
+		    "type": "view", 
+		    "name": "学校列表", 
+		    "url": "http://115.159.158.86/school_list.html"
+		}
+	    ]
+	}
     ]
 }
