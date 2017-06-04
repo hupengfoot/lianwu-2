@@ -10,7 +10,7 @@ const schoolBiz = require(path.join(global.rootPath, "interfaceBiz/schoolBiz"));
 
 router.use("/add", function(req, res){
     var param = req.urlParams;
-    schoolBiz.add(param.szName, param.szContactsName, param.szContactsWe, param.szContactsPhone, param.szContactsMail, param.szSchoolDesc, param.szArea, param.szType, param.szCourseTime, function(err, rows){
+    schoolBiz.add(param.szName, param.szContactsName, param.szContactsWe, param.szContactsPhone, param.szContactsMail, param.szSchoolDesc, param.szArea, param.szType, param.iFullTime,  param.szCourseTime, function(err, rows){
 	msg.wrapper(err, rows, res);
     });
 });

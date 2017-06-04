@@ -56,6 +56,7 @@ module.exports = [
 	szSchoolDesc : joi.string().required(),
 	szArea : joi.string().required(),
 	szType : joi.string().required(),
+	iFullTime : joi.number().integer().min(0).required(),
 	szCourseTime : joi.string().required()
     },
     post:1,

@@ -33,6 +33,10 @@
 		return oneCell;
 	    }
 	    function fillOneTeacher(row){
+		var duty = "全职";
+		if(parseInt(row.iFullTime) === 0){
+		    duty = "兼职";
+		}
 		var oneTeacherContent = '' +
 		    '<div class="weui-cell">' +
 		    '<div class="weui-cell__hd">' +
@@ -49,6 +53,7 @@
 		    fillOneCell("学校描述", row.szSchoolDesc) +
 		    fillOneCell("学校地址", row.szArea) +
 		    fillOneCell("舞种", row.szType) +
+		    fillOneCell("职务类型", duty) +
 		    fillOneCell("排课时间", row.szCourseTime); 
 		return oneTeacherContent;
 	    }
